@@ -37,6 +37,7 @@ RUN install2.r --error \
     codetools \
     tictoc \
     randomForest \
-    xgboost
+    xgboost \
+    tidyverse
 
 
