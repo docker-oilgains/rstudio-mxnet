@@ -19,7 +19,10 @@ RUN apt-get update \
     libcurl4-openssl-dev \
     libssl-dev \
     libxml2-dev \
-    libxt-dev
+    libxt-dev \
+    fftw3 \
+    fftw3-dev \
+    pkg-config
 
 
 USER rstudio
@@ -38,6 +41,8 @@ RUN install2.r --error \
     tictoc \
     randomForest \
     xgboost \
-    tidyverse
+    tidyverse \
+    fftwtools
+    
 
 
