@@ -1,4 +1,4 @@
-FROM rocker/rstudio
+FROM f0nzie/rstudio
 MAINTAINER Alfonso Reyes
 
 # install python-dev. This affects the .so library loading
