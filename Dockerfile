@@ -1,3 +1,4 @@
+# no rocker here
 FROM f0nzie/rstudio
 MAINTAINER Alfonso Reyes
 
