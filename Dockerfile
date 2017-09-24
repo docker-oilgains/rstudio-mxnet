@@ -24,7 +24,7 @@ RUN apt-get update \
     fftw3-dev \
     pkg-config
 
-
+# install mxnet as rstudio user
 USER rstudio
 # download MxNet sources and build MXNet core shared library
 RUN cd ~/ \
@@ -35,7 +35,10 @@ RUN cd ~/ \
     && make rpkg \
     && R CMD INSTALL mxnet_current_r.tar.gz
 
+# go back as root user
 USER root
+
+# install packages that are used in the demos
 RUN install2.r --error \
     codetools \
     tictoc \
@@ -43,6 +46,3 @@ RUN install2.r --error \
     xgboost \
     tidyverse \
     fftwtools
-    
-
-
